@@ -31,10 +31,11 @@ const SignUpForm = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-        </div>
-        <div className="invalid-feedback">
+          <div className="invalid-feedback">
             Please Enter valid email
           </div>
+        </div>
+        
         <div className="form-group was-validated mb-3">
           <label htmlFor="exampleInputPassword1" className="form-label fw-bold">
             Password

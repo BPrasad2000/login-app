@@ -21,26 +21,36 @@ const Login = () => {
   return (
     <div>
       <h1 className="text-center pb-2">Login</h1>
-      <form onSubmit={handlesubmit}>
-        <div className="mb-3">
+      <form className="needs-validation" onSubmit={handlesubmit} noValidate>
+        <div className="form-group was-validated mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label  fw-bold">
             Email address
           </label>
           <input
             type="email"
             className="form-control"
+            id="exampleInputEmail1"
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
+          <div className="invalid-feedback">
+            Please Enter your email
+          </div>
         </div>
-        <div className="mb-3">
+        <div className="form-group was-validated mb-3">
           <label htmlFor="exampleInputPassword1" className="form-label fw-bold">
             Password
           </label>
           <input
             type="password"
             className="form-control"
+            id="exampleInputPassword1"
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
+          <div className="invalid-feedback">
+            Please Enter your password
+          </div>
         </div>
         <div className="center">
           <button type="submit">Login</button>
@@ -57,5 +67,5 @@ const Login = () => {
   );
 };
 
-export default Login;
 
+ export default Login;

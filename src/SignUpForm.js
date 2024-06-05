@@ -20,8 +20,8 @@ const SignUpForm = () => {
   return (
     <div>
         <h1 className="text-center pb-2">Sign Up</h1>
-        <form onSubmit={handlesubmit}>
-        <div className="mb-3">
+        <form className="needs-validation" onSubmit={handlesubmit} noValidate>
+        <div className="form-group was-validated mb-3">
           <label htmlFor="exampleInputEmail1" className="form-label  fw-bold">
             Email address
           </label>
@@ -29,9 +29,13 @@ const SignUpForm = () => {
             type="email"
             className="form-control"
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </div>
-        <div className="mb-3">
+        <div className="invalid-feedback">
+            Please Enter valid email
+          </div>
+        <div className="form-group was-validated mb-3">
           <label htmlFor="exampleInputPassword1" className="form-label fw-bold">
             Password
           </label>
@@ -39,7 +43,9 @@ const SignUpForm = () => {
             type="password"
             className="form-control"
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
+          
           </div>
           <div className="center">
       <button type="submit">Sign Up</button>

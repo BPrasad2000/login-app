@@ -51,7 +51,7 @@ const SignUpForm = () => {
           <div className="center">
       <button type="submit">Sign Up</button>
       </div>
-      <p>
+      <p className="mt-3">
         Already Registered? <Link className="link" to={"/"}>Login</Link>
       </p>
       </form>

@@ -33,10 +33,11 @@ color: white;
 font-size: large;
 font-weight: bold;
 text-decoration: none;
+margin: 10px;
 }
 
 .link:hover{
-  color: blue;
+  color: black;
   text-decoration: underline;
 }
 
